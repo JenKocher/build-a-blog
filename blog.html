@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for blogpost in blogposts %}
+      <div class='blogpost'>
+        <div class='blogpost-title'><a href='/blog/{{blogpost.key().id()}}'>{{blogpost.title}}</a></div>
+        <div class='blogpost-date'>written: {{blogpost.created.strftime("%m-%d-%y")}}</div>
+        <pre class='blogpost-body'>{{blogpost.blogpost}}</pre>
+      </div>
+    {% endfor %}
+
+{% endblock %}

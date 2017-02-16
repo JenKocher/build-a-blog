@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class='blogpost'>
+    <div class='blogpost-title'><a href='/blog/{{post_id}}'>{{blogpost.title}}</a></div>
+    <div class='blogpost-date'>written: {{blogpost.created.strftime("%m-%d-%y")}}</div>
+    <pre class='blogpost-body'>{{blogpost.blogpost}}</pre>
+  </div>
+
+{% endblock %}
